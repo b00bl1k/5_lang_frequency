@@ -3,6 +3,9 @@ import string
 import sys
 
 
+DISPLAY_WORDS_COUNT = 10
+
+
 def load_data(filepath):
     with open(filepath, "r", encoding="utf8") as fh:
         return fh.read()
@@ -16,8 +19,7 @@ def split_text_by_words(text):
 
 def get_most_frequent_words(text):
     words = split_text_by_words(text)
-    top_words = Counter(words).most_common(10)
-    return top_words[:10]
+    return Counter(words).most_common(DISPLAY_WORDS_COUNT)
 
 
 def main():
