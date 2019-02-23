@@ -1,6 +1,6 @@
 # Frequency Analysis of Words
 
-The script takes as an input the path to the file and considers the frequency of words in the text.
+The script takes as input the path to the text file and displays to the console the ten most popular words in this file in decreasing order of frequency.
 
 # Quickstart
 
@@ -12,9 +12,14 @@ $ python lang_frequency.py text.txt
 Most frequent words in text:
  в:6
  и:5
+ the:5
  на:3
  скрипт:3
  не:2
+ можно:2
+ такой:2
+ вход:2
+ должен:2
 ```
 
 # Project Goals

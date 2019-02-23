@@ -22,7 +22,7 @@ def get_most_frequent_words(text):
         else:
             freq_dict[word] = 1
     top_words = sorted(freq_dict.items(), key=lambda kv: kv[1], reverse=True)
-    return top_words[:5]
+    return top_words[:10]
 
 
 def main():
