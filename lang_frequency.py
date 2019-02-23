@@ -1,3 +1,4 @@
+from collections import Counter
 import string
 import sys
 
@@ -15,20 +16,14 @@ def split_text_by_words(text):
 
 def get_most_frequent_words(text):
     words = split_text_by_words(text)
-    freq_dict = {}
-    for word in words:
-        if word in freq_dict.keys():
-            freq_dict[word] += 1
-        else:
-            freq_dict[word] = 1
-    top_words = sorted(freq_dict.items(), key=lambda kv: kv[1], reverse=True)
+    top_words = Counter(words).most_common(10)
     return top_words[:10]
 
 
 def main():
     try:
-        result = load_data(sys.argv[1])
-        words = get_most_frequent_words(result)
+        text = load_data(sys.argv[1])
+        words = get_most_frequent_words(text)
         print("Most frequent words in text:")
         for word in words:
             print(" {}:{}".format(*word))
