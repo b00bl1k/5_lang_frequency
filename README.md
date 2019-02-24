@@ -6,8 +6,7 @@ The script takes as input the path to the text file and displays to the console 
 
 Example of script launch on Linux, Python 3.5:
 
-```python
-
+```bash
 $ python lang_frequency.py text.txt
 Most frequent words in text:
  в:6
